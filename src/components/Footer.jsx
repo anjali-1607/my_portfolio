@@ -39,7 +39,7 @@ const Footer = () => {
                             <FaGithub className="hover:shadow-glow transition-shadow duration-300" />
                         </a>
                         <a
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/anjali_rajpoot_1609/profilecard/?igsh=MWZmZmt5eXQ3bHVqMQ=="
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-primary text-3xl hover:text-primary transition-colors duration-300"
