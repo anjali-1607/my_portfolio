@@ -1,14 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import profileImg from "../assets/images/profile.jpeg";
 
 const Hero = () => {
+    const textToType = "Hello, I'm Anjali Paderiya"; // Text to type
+    const typingSpeed = 100; // Typing speed in milliseconds
+    const resetDelay = 2000; // Delay before restarting typing (in ms)
+
+    const [displayedText, setDisplayedText] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        let timeout;
+
+        if (currentIndex < textToType.length) {
+            // Add next character
+            timeout = setTimeout(() => {
+                setDisplayedText((prev) => prev + textToType[currentIndex]);
+                setCurrentIndex((prev) => prev + 1);
+            }, typingSpeed);
+        } else {
+            // Reset text after a delay
+            timeout = setTimeout(() => {
+                setDisplayedText("");
+                setCurrentIndex(0);
+            }, resetDelay);
+        }
+
+        return () => clearTimeout(timeout); // Cleanup timeout on component unmount
+    }, [currentIndex, textToType]);
+
     return (
         <motion.section
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="bg-dark h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-36"
+            className="h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-36"
             id="home">
             {/* Left Section */}
             <motion.div
@@ -18,8 +45,8 @@ const Hero = () => {
                 viewport={{ once: true }}
                 className="flex-1 text-center md:text-left">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
-                    <span className="text-white">Hello, I&apos;m</span>{" "}
-                    <span className="text-primary">Anjali Paderiya</span>
+                    <span className="text-primary">{displayedText}</span>
+                    <span className="text-primary blinking-cursor">|</span>
                 </h1>
                 <h2 className="text-lg sm:text-xl md:text-2xl text-light mt-4 font-semibold">
                     Creative Frontend Developer

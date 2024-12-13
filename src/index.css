@@ -56,3 +56,13 @@ nav button:hover::after {
 .animate-glow {
     animation: glow 6s infinite;
 }
+.blinking-cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

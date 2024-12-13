@@ -29,7 +29,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="bg-[#0b0f1a] py-16 px-6 sm:px-12 md:px-20 lg:px-36 relative overflow-hidden">
+            className="py-16 px-6 sm:px-12 md:px-20 lg:px-36 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute w-96 h-96 bg-[#38f9d6] rounded-full opacity-75 blur-3xl animate-glow top-1/4 left-1/4"></div>
