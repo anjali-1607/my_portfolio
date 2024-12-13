@@ -35,7 +35,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-36"
+            className="h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-36 pb-0 mb-0 sm:pb-0 sm:mb-0"
             id="home">
             {/* Left Section */}
             <motion.div
