@@ -26,7 +26,9 @@ const Hero = () => {
                 </p>
                 <div className="mt-8">
                     <a
-                        href="#services"
+                        href="https://github.com/anjali-1607"
+                        target="_blank"
+                        // rel="noopener noreferrer"
                         className="inline-block bg-primary text-dark px-4 py-2 sm:px-6 sm:py-3 rounded-md shadow-md hover:bg-light transition-all duration-300 font-medium">
                         Explore My Work
                     </a>
