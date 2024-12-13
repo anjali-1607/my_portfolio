@@ -56,12 +56,16 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="p-6 bg-secondary rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        className="p-6 bg-secondary rounded-lg shadow-lg cursor-pointer"
+                        whileHover={{
+                            scale: 1.02,
+                            boxShadow: "0px 8px 16px rgba(56, 249, 215, 0.5)",
+                        }}
                         variants={{
-                            hidden: { opacity: 0, scale: 0.8 },
+                            hidden: { opacity: 0, scale: 0.95 },
                             visible: { opacity: 1, scale: 1 },
                         }}
-                        transition={{ duration: 0.5 }}>
+                        transition={{ duration: 0.3 }}>
                         <img
                             src={project.image}
                             alt={project.title}
