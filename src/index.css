@@ -38,3 +38,21 @@ nav button:hover::after {
     background: linear-gradient(90deg, #38f9d7, #818cf8);
     border-radius: 2px;
 }
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px #38f9d6, 0 0 50px #38f9d6;
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 40px #38f9d6, 0 0 100px #38f9d6;
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: 0 0 20px #38f9d6, 0 0 50px #38f9d6;
+        transform: scale(1);
+    }
+}
+
+.animate-glow {
+    animation: glow 6s infinite;
+}
