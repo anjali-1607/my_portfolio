@@ -52,7 +52,7 @@ const Header = () => {
                             { id: "skills", label: "Skills" },
                             { id: "experience", label: "Experience" },
                             { id: "projects", label: "Projects" },
-                            { id: "footer", label: "Footer" },
+                            { id: "footer", label: "Contact me" },
                         ].map(({ id, label }) => (
                             <button
                                 key={id}
@@ -79,7 +79,7 @@ const Header = () => {
                             { id: "skills", label: "Skills" },
                             { id: "experience", label: "Experience" },
                             { id: "projects", label: "Projects" },
-                            { id: "footer", label: "Footer" },
+                            { id: "footer", label: "Contact me" },
                         ].map(({ id, label }) => (
                             <button
                                 key={id}
