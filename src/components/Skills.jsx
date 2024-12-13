@@ -38,7 +38,7 @@ const Skills = () => {
         { name: "Python", icon: <FaPython className="text-green-500" /> },
         { name: "C++", icon: <SiCplusplus className="text-blue-600" /> },
         { name: "SQL", icon: <SiMysql className="text-blue-700" /> },
-        { name: "GitHub", icon: <FaGithub className="text-gray-600" /> },
+        { name: "GitHub", icon: <FaGithub className="text-gray-100" /> },
         {
             name: "UI/UX",
             icon: <MdOutlineDesignServices className="text-pink-400" />,
@@ -70,7 +70,7 @@ const Skills = () => {
         { name: "AWS", icon: <FaAws className="text-orange-400" /> },
         {
             name: "Problem Solving",
-            icon: <MdOutlineDesignServices className="text-gray-700" />,
+            icon: <MdOutlineDesignServices className="text-gray-100" />,
         },
         { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
         {
