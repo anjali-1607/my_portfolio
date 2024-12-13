@@ -10,7 +10,7 @@ import HelpyMotoLogo from "../assets/logos/helpymoto.jpg";
 const experiences = [
     {
         title: "Software Engineer Intern",
-        company: "Cufront Healthcare, Nashik, India",
+        company: "Cufront Healthcare Technologies, Pune, India",
         duration: "June 2024 - Sept 2024",
         logo: CufrontLogo,
         responsibilities: [
