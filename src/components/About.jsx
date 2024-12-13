@@ -1,14 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 import profileImg from "../assets/images/profile2.png";
 
 const About = () => {
     return (
-        <section
+        <motion.section
             id="about"
-            className="bg-dark px-6 sm:px-12 md:px-20 lg:px-36 sm:mt-5">
-            <div className="flex flex-col md:flex-row items-center md:items-start text-light p-6 bg-secondary rounded-lg shadow-lg mt-10">
+            className="bg-dark px-6 sm:px-12 md:px-20 lg:px-36 sm:mt-5"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}>
+            <motion.div
+                className="flex flex-col md:flex-row items-center md:items-start text-light p-6 bg-secondary rounded-lg shadow-lg mt-10"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}>
                 {/* Image Section */}
-                <div className="flex justify-center md:justify-start mb-8 md:mb-0 md:mr-16">
+                <motion.div
+                    className="flex justify-center md:justify-start mb-8 md:mb-0 md:mr-16"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}>
                     <div className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-lg shadow-lg">
                         <img
                             src={profileImg}
@@ -17,10 +32,15 @@ const About = () => {
                         />
                         <div className="absolute top-0 left-0 w-full h-full border-4 border-primary rounded-lg opacity-50 blur-md animate-pulse"></div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Text Section */}
-                <div className="text-center md:text-left">
+                <motion.div
+                    className="text-center md:text-left"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}>
                     <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 mt-3">
                         About Me
                     </h2>
@@ -50,9 +70,9 @@ const About = () => {
                             that make a meaningful impact.
                         </span>
                     </p>
-                </div>
-            </div>
-        </section>
+                </motion.div>
+            </motion.div>
+        </motion.section>
     );
 };
 

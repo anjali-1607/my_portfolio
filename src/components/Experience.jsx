@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaBriefcase } from "react-icons/fa";
 
 // Import company logos
@@ -43,9 +44,13 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section
+        <motion.section
             id="experience"
-            className="bg-dark text-light pb-20 lg:pt-16 px-6 sm:px-12 md:px-20 lg:px-36">
+            className="bg-dark text-light pb-20 lg:pt-16 px-6 sm:px-12 md:px-20 lg:px-36"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}>
             <div className="max-w-6xl mx-auto text-center mb-16">
                 <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-8 text-center">
                     Work Experience
@@ -55,9 +60,16 @@ const Experience = () => {
             {/* Grid Layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 {experiences.map((exp, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className="relative group bg-gradient-to-r from-secondary to-dark rounded-lg p-6 shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                        className="relative group bg-gradient-to-r from-secondary to-dark rounded-lg p-6 shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: index * 0.2, // Staggered animation for each card
+                        }}
+                        viewport={{ once: true }}>
                         {/* Background Element */}
                         <div className="absolute inset-0 bg-primary/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
 
@@ -92,10 +104,10 @@ const Experience = () => {
                                 <li key={idx}>{item}</li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 };
 
