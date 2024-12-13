@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
@@ -15,6 +15,21 @@ const ContactForm = () => {
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    useEffect(() => {
+        // Check localStorage for submission timestamp
+        const submissionTime = localStorage.getItem("formSubmissionTime");
+        if (submissionTime) {
+            const elapsedTime = Date.now() - parseInt(submissionTime, 10);
+            const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+            if (elapsedTime < twentyFourHours) {
+                setIsSubmitted(true);
+            } else {
+                // Clear the old timestamp if 24 hours have passed
+                localStorage.removeItem("formSubmissionTime");
+            }
+        }
+    }, []);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,6 +58,12 @@ const ContactForm = () => {
                 });
                 setFormData({ from_name: "", from_email: "", message: "" });
                 setIsSubmitted(true); // Hide form and show thank you message
+
+                // Store submission timestamp in localStorage
+                localStorage.setItem(
+                    "formSubmissionTime",
+                    Date.now().toString()
+                );
             },
             (err) => {
                 console.error("FAILED...", err);
