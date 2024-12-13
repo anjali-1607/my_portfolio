@@ -1,27 +1,82 @@
 import React, { useState } from "react";
 
+import {
+    FaHtml5,
+    FaCss3Alt,
+    FaJsSquare,
+    FaReact,
+    FaPython,
+    FaGithub,
+    FaAws,
+    FaBootstrap,
+    FaFigma,
+} from "react-icons/fa";
+import {
+    SiTailwindcss,
+    SiCplusplus,
+    SiMysql,
+    SiCanva,
+    SiSemanticuireact,
+    SiPostman,
+    SiLighthouse,
+} from "react-icons/si";
+import { MdOutlineDesignServices } from "react-icons/md";
+
 const Skills = () => {
     const initialSkills = [
-        { name: "HTML", icon: "🌐" },
-        { name: "CSS", icon: "🎨" },
-        { name: "JavaScript", icon: "💻" },
-        { name: "React.js", icon: "⚛️" },
-        { name: "Tailwind CSS", icon: "🌀" },
-        { name: "Python", icon: "🐍" },
-        { name: "C++", icon: "🔧" },
-        { name: "SQL", icon: "📊" },
-        { name: "GitHub", icon: "🐙" },
-        { name: "UI/UX", icon: "🎨" },
-        { name: "Responsive Design", icon: "📱" },
-        { name: "Canva", icon: "🖌️" },
-        { name: "Figma", icon: "📐" },
-        { name: "Chat GPT", icon: "🤖" },
-        { name: "Semantic UI", icon: "🌈" },
-        { name: "Bootstrap", icon: "📦" },
-        { name: "AWS", icon: "☁️" },
-        { name: "Problem Solving", icon: "🧠" },
-        { name: "Postman", icon: "📮" },
-        { name: "Lighthouse", icon: "💡" },
+        { name: "HTML", icon: <FaHtml5 className="text-red-500" /> },
+        { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+        {
+            name: "JavaScript",
+            icon: <FaJsSquare className="text-yellow-500" />,
+        },
+        { name: "React.js", icon: <FaReact className="text-blue-400" /> },
+        {
+            name: "Tailwind CSS",
+            icon: <SiTailwindcss className="text-teal-400" />,
+        },
+        { name: "Python", icon: <FaPython className="text-green-500" /> },
+        { name: "C++", icon: <SiCplusplus className="text-blue-600" /> },
+        { name: "SQL", icon: <SiMysql className="text-blue-700" /> },
+        { name: "GitHub", icon: <FaGithub className="text-gray-600" /> },
+        {
+            name: "UI/UX",
+            icon: <MdOutlineDesignServices className="text-pink-400" />,
+        },
+        {
+            name: "Responsive Design",
+            icon: <FaReact className="text-blue-400" />,
+        }, // React icon reused for responsiveness
+        { name: "Canva", icon: <SiCanva className="text-purple-500" /> },
+        { name: "Figma", icon: <FaFigma className="text-red-500" /> },
+        {
+            name: "ChatGPT",
+            icon: (
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+                    alt="ChatGPT"
+                    className="w-6 h-6"
+                />
+            ),
+        },
+        {
+            name: "Semantic UI",
+            icon: <SiSemanticuireact className="text-teal-600" />,
+        },
+        {
+            name: "Bootstrap",
+            icon: <FaBootstrap className="text-purple-500" />,
+        },
+        { name: "AWS", icon: <FaAws className="text-orange-400" /> },
+        {
+            name: "Problem Solving",
+            icon: <MdOutlineDesignServices className="text-gray-700" />,
+        },
+        { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+        {
+            name: "Lighthouse",
+            icon: <SiLighthouse className="text-green-600" />,
+        },
     ];
 
     const [skills] = useState(initialSkills);
