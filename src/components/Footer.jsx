@@ -91,7 +91,7 @@ const Footer = () => {
                             <li className="flex items-center">
                                 <FaMapMarkerAlt className="text-primary text-xl mr-4" />
                                 <span className="text-lg">
-                                    Shankeshwar City Near Aurobindo Hospital,
+                                    Shankeshwar City Near New Vijay Nagar,
                                     Indore, MP, India
                                 </span>
                             </li>
