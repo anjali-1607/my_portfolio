@@ -7,6 +7,13 @@ import chatbotImg from "../assets/images/chatbot.jpg";
 const Projects = () => {
     const projects = [
         {
+            title: "Hiregenzo",
+            description:
+                "HireGenZo is an AI-powered recruitment platform that automates job matching, resume parsing, and skill assessments for efficient hiring.",
+            link: "https://www.hiregenzo.com/",
+            image: chatbotImg,
+        },
+        {
             title: "Ecommerce Platform",
             description:
                 "Developed a fully responsive platform for footwear with CMS integration for streamlined product management.",
@@ -20,13 +27,13 @@ const Projects = () => {
             link: "https://github.com/anjali-1607/music-player",
             image: musicPlayerImg,
         },
-        {
-            title: "Healthcare Chatbot",
-            description:
-                "Built an AI-based chatbot for appointment scheduling and patient inquiries.",
-            link: "https://github.com/anjali-1607/healthcare-chatbot",
-            image: chatbotImg,
-        },
+        // {
+        //     title: "Healthcare Chatbot",
+        //     description:
+        //         "Built an AI-based chatbot for appointment scheduling and patient inquiries.",
+        //     link: "https://github.com/anjali-1607/healthcare-chatbot",
+        //     image: chatbotImg,
+        // },
     ];
 
     return (
